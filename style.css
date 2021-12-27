@@ -46,12 +46,6 @@ h1 {
 
 .card > p {
   grid-area: id;
-  /* margin: 0; */
-}
-
-.card > img {
-  max-height: 100px;
-  grid-area: image;
 }
 
 #searchBar {
