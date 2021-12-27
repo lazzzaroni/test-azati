@@ -27,3 +27,20 @@ const loadRepo = async (repoName, ownerName) => {
 };
 
 loadRepo(repoName, ownerName);
+
+// parse JSON to repo.html
+const display = (req) => {
+  repo.innerHTML = `
+    <h1>${req.name}</h1>
+    <ul class="cardRepo">
+      <li>URL:
+      <a href="${req.html_url}" target="_blank">${req.html_url}</a>
+      </li>
+      <li>Full name: ${req.full_name}</li>
+      <li>ID: ${req.id}</li>
+      <li>Language: ${req.language}</li>
+      <li>Description: ${req.description}</li>
+      <li>Created at: ${req.created_at}</li>
+    </ul>
+    `;
+};
