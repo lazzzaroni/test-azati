@@ -67,3 +67,12 @@ h1 {
   top: 2px;
   right: 15px;
 }
+
+.cardRepo {
+  list-style-type: none;
+  background-color: #eaeaea;
+  border-radius: 3px;
+  padding: 10px 20px;
+  text-align: left;
+  line-height: 32px;
+}
