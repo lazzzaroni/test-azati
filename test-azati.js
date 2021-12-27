@@ -13,3 +13,21 @@ searchBar.addEventListener('keyup', (e) => {
     loadRepos(searchString);
   }
 });
+
+// make API calls from searchbar
+const loadRepos = async (searchString) => {
+  try {
+    const res = await fetch(
+      `https://api.github.com/search/repositories?q=${searchString}`
+    );
+
+    reposNames = await res.json();
+    if (reposNames.items === undefined || reposNames.items === []) {
+      reposNames = {};
+    } else {
+      displayRepos(reposNames.items);
+    }
+  } catch (err) {
+    console.error(err);
+  }
+};
